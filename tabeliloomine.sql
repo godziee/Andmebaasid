@@ -16,3 +16,10 @@ sisseastumis_kp date
 --identity(1,1) -? määrab igaühele oma numbri
 
 SELECT * FROM opilane;
+--andmete lisamine
+INSERT INTO opilane(
+eesnimi, perenimi, isikukood, aadress, sisseastumis_kp)
+VALUES
+('Network', 'Subnet mask', '50602297221', 'Tallinn', '2023-08-16'),
+('DHCP', 'Jakovlev', '50209149238', 'Tallinn', '2023-08-16');
+SELECT * FROM opilane;
