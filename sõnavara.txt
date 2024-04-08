@@ -1,6 +1,6 @@
 Andmebaas - база данных
 andmebaaside haldussüsteem - система управления базами данных
-tabel - таблица
+tabel - табель
 rida - ряд
 veerg - столб
 kirjed - записи
