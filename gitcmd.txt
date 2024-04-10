@@ -1,0 +1,15 @@
+cd desktop 
+
+git init Andmebaasid
+
+cd Andmebaasid
+
+git config --global user.name "Bogdan Jakovlev"
+
+git config --global user.email "bogdan.jakovlev11@gmail.com"
+
+git config --global --list
+
+git clone "url"
+
+git status
