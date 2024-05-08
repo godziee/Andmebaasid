@@ -32,7 +32,7 @@ values (1, 'Female')
 insert into Gender (Id, Gender)
 values (2, 'Male')
 
---- ?
+--- fk loomine
 alter table Person add constraint tblPerson_GenderId_FK
 foreign key (GenderId) references Gender(Id)
 
@@ -85,14 +85,14 @@ update Person
 set Age = 149
 where Id = 8
 
---?
+-- lisab vanusepiirangu 1 kuni 149
 alter table Person
 add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
 insert into Person (Id, Name, Email, GenderId, Age)
 values (9, 'Test', 'Test', 2, 160)
 
---?
+--kuvab Person tabelit, kustutab kus väärtus Id = 8 ja kuvab Person tabelit uuesti
 select * from Person
 go
 delete from Person where Id = 8
@@ -121,16 +121,16 @@ select * from Person where Age between 30 and 50
 select * from Person where City like 'n%'
 select * from Person where Email like '%@%'
 
--- n'itab kõiki, kellel ei ole @-märki emailis
+-- näitab kõiki, kellel ei ole @-märki emailis
 select * from Person where Email not like '%@%'
 
 --- näitab, kelle on emailis ees ja peale @-märki
 -- ainult üks täht
 select * from Person where Email like '_@_.com'
 
---?
+-- kuvab Person tabelit, kus Name ei alga tähtedega W,A,S
 select * from Person where Name like '[^WAS]%'
---- ?
+--- kuvab Person tabelit, kus linnad on Gotham või New York ja vanus rohkem või võrdne 40 
 select * from Person where (City = 'Gotham' or City = 'New York')
 and Age >= 40
 
