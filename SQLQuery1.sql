@@ -236,7 +236,10 @@ add DepartmentId2
 int null
 
 
---?
+-- lisab Employees tabelisse uued veerud ja uuendab väärsused
+alter table Employees
+add FirstName nvarchar(30)
+
 alter table Employees
 add MiddleName nvarchar(30)
 
