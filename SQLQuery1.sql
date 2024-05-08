@@ -223,16 +223,16 @@ select distinct Name, DepartmentId from Employees
 
 --- summeerib töötajate palgad
 select sum(cast(Salary as int)) from Employees
----?
+---kuvab minimaalne palka ja lisab Employees tabelisse uued veerud
 select min(cast(Salary as int)) from Employees
 
 
 alter table Employees
-add City nvarchar(25)
+add City2 nvarchar(25)
 
 
 alter table Employees
-add DepartmentId
+add DepartmentId2
 int null
 
 
