@@ -193,6 +193,8 @@ values (4, 'Other Deparment', 'Sydney', 'Cindrella')
 
 select * from Department
 
+--sisestame v‰‰rtuse tabelisse ja kuvame Employees tabelit
+
 insert into Employees (Id, Name, Gender, Salary, DepartmentId)
 values (1, 'Tom', 'Male', 4000, 1)
 insert into Employees (Id, Name, Gender, Salary, DepartmentId)
