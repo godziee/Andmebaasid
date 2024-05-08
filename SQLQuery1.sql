@@ -348,9 +348,9 @@ as begin
 	select @FirstName = FirstName from employees where Id = @Id
 end
 
---?
+-- põhjustab protseduuri ja näitab Name of the employee ja töötaja enda nime
 declare @FirstName nvarchar(50)
-execute spGetNameById1 6, @FirstName output
+exec spGetNameById1 6, @FirstName output
 print 'Name of the employee = ' + @FirstName
 
 --?
