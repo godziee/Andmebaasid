@@ -360,7 +360,7 @@ as begin
 	return (select FirstName from Employees where Id = @Id)
 end
 
--- ?
+-- käivitab protseduuri, mis näitab teksti Name of the employee ja oma töökaaslase nime ning näitab tabelit Employees
 declare @EmployeeName nvarchar(50)
 exec @EmployeeName = spGetNameById2 1
 print 'Name of the employee = ' + @EmployeeName
