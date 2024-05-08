@@ -85,7 +85,7 @@ update Person
 set Age = 149
 where Id = 8
 
--- lisab vanusepiirangu 1 kuni 149
+--  lisab vanusepiirangu 1 kuni 149
 alter table Person
 add constraint CK_Person_Age check (Age > 0 and Age < 150)
 
