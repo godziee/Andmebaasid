@@ -353,7 +353,7 @@ declare @FirstName nvarchar(50)
 exec spGetNameById1 6, @FirstName output
 print 'Name of the employee = ' + @FirstName
 
---?
+-- loob protseduuri ja näitab ID-töötajat 
 create proc spGetNameById2
 @Id int
 as begin
