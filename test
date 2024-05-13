@@ -1,0 +1,53 @@
+loo päästik
+
+LinnaLisamine 
+
+INSERT INTO logi(kuupaev, toiming, andmed, kasutaja)
+VALUES (NOW(),
+  'linn on lisatud',
+  NEW.linnanimi,
+  USER()
+  )
+
+
+
+INSERT INTO logi(kuupaev, toiming, andmed, kasutaja)
+VALUES (NOW(),
+  'linn on lisatud',
+  concat(NEW.linnanimi, 'rahvaarv: ', NEW.rahvaarv),
+  USER()
+  )
+
+
+
+
+
+INSERT INTO logitabel(autoID, automarka, varv, aasta, probeg)
+VALUES (NOW(),
+  'auto on lisatud',
+  concat(NEW.automarka, 'autoID: ', NEW.autoID),
+  USER()
+  )
+
+
+
+INSERT INTO logitabel(autoID, automarka, varv, aasta, probeg)
+VALUES (NOW(),
+  'auto on kustutatud',
+  concat(OLD.automarka, 'autoID: ', OLD.autoID),
+  USER()
+  )
+
+
+
+
+
+
+INSERT INTO logitabel(autoID, automarka, varv, aasta, probeg)
+VALUES (NOW(),
+  'auto on uuendatud',
+  concat(
+      'vanad: ', OLD.automarka, ' autoID: ', OLD.autoID,
+  '\n uued: ', NEW.automarka, ' autoID: ', NEW.autoID), 
+  USER()
+  )
