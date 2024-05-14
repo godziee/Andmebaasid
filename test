@@ -51,3 +51,11 @@ VALUES (NOW(),
   '\n uued: ', NEW.automarka, ' autoID: ', NEW.autoID), 
   USER()
   )
+
+
+INSERT INTO logitabel2(autoID, automark, number, varv, aasta, probeg)
+VALUES (NOW(),
+  'register on kustutatud',
+  concat(OLD.automark, 'autoID: ', OLD.autoID),
+  USER()
+  )
